@@ -46,17 +46,14 @@
 	
 	<script src="js/jquery-3.6.0.js"></script>
 	<script>
-
-		if ($('#attr').is(':visible')){
-			$("#map").click(function() {
-			  $("#attr").slideUp();
-			});
-		}
-		else {
-			$("#map").click(function() {
+		$("#map").click(function() {
+			if ($('#attr').is(':visible')){
+				$("#attr").slideUp();
+			}
+			else {
 			  $("#attr").show();
-			});
-		}
+			}  
+		});
 		
 		/*
 		$("#map").click(function() {
