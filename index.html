@@ -59,26 +59,15 @@
 		  var t = d.toLocaleTimeString();
 		  document.getElementById("myTime").innerHTML = t;
 		}
-		</script>
 
 		$("#map").click(function() {
 			if ($('#attr').is(':visible')){
-				$("#attr").slideUp();
+				$("#attr").slideUp("slow");
 			}
 			else {
-			  $("#attr").slideDown();
+			  $("#attr").slideDown("slow");
 			}  
 		});
-		
-		/*
-		$("#map").click(function() {
-		  $("#attr").slideUp();
-		});
-
-		$("#back").click(function() {
-		  $("#attr").slideUp();
-		});
-		*/
 	</script>
   </body>
 </html>
