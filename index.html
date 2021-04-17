@@ -13,6 +13,7 @@
   <body>
 	<div class="container-fluid text-xs-center p-5 bg-primary text-light">
 		<h1>YMG的世界</h1>
+		<p id="myTime"></p>
 	</div>
 
 	<div class="container-fluid bg-transparent p-5" id="attr">
@@ -46,10 +47,20 @@
 	
 	<script src="js/jquery-3.6.0.js"></script>
 	<script>
-		var dt = new Date();
-		var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-		document.write(time);
-		
+		//var dt = new Date();
+		//var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+		//document.write(time);
+
+		<script>
+		var myVar = setInterval(myTimer, 1000);
+
+		function myTimer() {
+		  var d = new Date();
+		  var t = d.toLocaleTimeString();
+		  document.getElementById("myTime").innerHTML = t;
+		}
+		</script>
+
 		$("#map").click(function() {
 			if ($('#attr').is(':visible')){
 				$("#attr").slideUp();
