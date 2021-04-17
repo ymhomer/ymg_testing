@@ -15,7 +15,7 @@
 		<h1>YMG的世界</h1>
 	</div>
 
-	<div class="container bg-transparent" id="attr">
+	<div class="container bg-transparent p-5" id="attr">
 	  <div class="row row-cols-2">
 		<div class="col">生命</div>
 		<div class="col">100</div>
@@ -46,13 +46,12 @@
 	
 	<script src="js/jquery-3.6.0.js"></script>
 	<script>
-		$("#map").click(function () {
-	    // Hide it but only if not hidden - hide
-	    $('.trigger:visible').hide();
 
-	    // Later in the script - Show it but only If it's not visible.  
-	    $('.trigger:hidden').show();
-	});
+		$("#map").click(function() {
+	    // Only if not hidden - hide
+	    // Later in the script - Only If not visible show. 
+	    $(this).next(".trigger").toggle();
+		});
 		/*
 		$("#map").click(function() {
 		  $("#attr").slideUp();
