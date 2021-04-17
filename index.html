@@ -31,6 +31,7 @@
 	
 	<div class="container">
 		<button type="button" class="btn btn-outline-primary" id="map">攻击</button>
+		<button type="button" class="btn btn-outline-primary" id="back">返回</button>
 	</div>
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -45,9 +46,22 @@
 	
 	<script src="js/jquery-3.6.0.js"></script>
 	<script>
+		$("#map").click(function () {
+	    // Hide it but only if not hidden - hide
+	    $('.trigger:visible').hide();
+
+	    // Later in the script - Show it but only If it's not visible.  
+	    $('.trigger:hidden').show();
+	});
+		/*
 		$("#map").click(function() {
 		  $("#attr").slideUp();
 		});
+
+		$("#back").click(function() {
+		  $("#attr").slideUp();
+		});
+		*/
 	</script>
   </body>
 </html>
